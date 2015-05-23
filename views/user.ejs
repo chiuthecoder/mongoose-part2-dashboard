@@ -1,0 +1,26 @@
+<html>
+<head>
+ <title></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<h1>Submitted Information</h1>
+	To Show
+<!--  <h3>Your Name: <%= user %></h3> -->
+<!--         <h3>Your Name: <%= user.name %></h3>
+        <h4>Your Age: <%= user.age %></h4>
+        <hr> -->
+
+To Edit
+<form method="post" action="/update/<%= user.id %>">
+<h3>Your Name: <input type="text" name="name" value="<%= user.name %>"> </h3>
+<h4>Your Age: <input type="text" name="age" value="<%= user.age %>"></h4>
+<input type="submit" value="Update">
+</form>
+<form method="post" action="/remove/<%= user.id %>">
+	<input type="submit" value="Remove">
+</form>
+        <hr>
+	<a href="/"><button>back</button></a>
+</body>
+</html>
